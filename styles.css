@@ -1,0 +1,290 @@
+/* =========================
+   Global Styles
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #1f2933;
+    background-color: #f9fafb;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* =========================
+   Buttons
+========================= */
+.button {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.button.primary {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: #fff;
+}
+
+.button.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
+}
+
+.button.large {
+    margin-top: 25px;
+    font-size: 1rem;
+}
+
+/* =========================
+   Header & Navigation
+========================= */
+.site-header {
+    background: #ffffff;
+    padding: 18px 60px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 22px;
+}
+
+.main-nav ul li a {
+    font-weight: 500;
+    color: #374151;
+}
+
+.main-nav ul li a:hover {
+    color: #2563eb;
+}
+
+/* =========================
+   Hero Section
+========================= */
+.hero-section {
+    min-height: 90vh;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 80px;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    max-width: 800px;
+}
+
+.hero-section p {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    max-width: 650px;
+    opacity: 0.9;
+}
+
+/* =========================
+   Expertise Section
+========================= */
+.expertise {
+    padding: 80px 60px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.expertise h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.expertise p {
+    max-width: 700px;
+    margin: auto;
+    color: #4b5563;
+}
+
+/* =========================
+   Features Grid
+========================= */
+.features-grid {
+    padding: 70px 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    background-color: #f1f5f9;
+}
+
+.feature {
+    background: #ffffff;
+    padding: 40px;
+    text-align: center;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-6px);
+}
+
+.feature h3 {
+    font-size: 1.3rem;
+    color: #1e3a8a;
+}
+
+/* =========================
+   Tutorials / Cards
+========================= */
+.content-list {
+    padding: 80px 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+    background-color: #ffffff;
+}
+
+.card {
+    background: #f9fafb;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+.card span {
+    font-size: 0.85rem;
+    color: #2563eb;
+    font-weight: 600;
+}
+
+.card h4 {
+    margin: 15px 0;
+    font-size: 1.15rem;
+}
+
+.card a {
+    font-weight: 600;
+    color: #1d4ed8;
+}
+
+/* =========================
+   Call To Action
+========================= */
+.cta-subscribe {
+    padding: 80px 60px;
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    text-align: center;
+    color: #ffffff;
+}
+
+.cta-subscribe h2 {
+    font-size: 2.2rem;
+}
+
+.cta-subscribe p {
+    margin: 12px 0 25px;
+}
+
+.cta-subscribe form {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.cta-subscribe input {
+    padding: 12px 18px;
+    border-radius: 30px;
+    border: none;
+    min-width: 260px;
+    outline: none;
+}
+
+.cta-subscribe button {
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: none;
+    background: #ffffff;
+    color: #1e40af;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* =========================
+   Footer
+========================= */
+.site-footer {
+    background: #020617;
+    color: #cbd5f5;
+    padding: 60px;
+}
+
+.footer-info h4 {
+    color: #ffffff;
+}
+
+.footer-nav {
+    margin: 20px 0;
+}
+
+.footer-nav a {
+    margin-right: 20px;
+    font-size: 0.9rem;
+}
+
+.social-links a img {
+    width: 22px;
+    margin-right: 14px;
+    filter: invert(1);
+}
+
+.site-footer p {
+    margin-top: 25px;
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 30px;
+    }
+
+    .hero-section h1 {
+        font-size: 2.2rem;
+    }
+
+    .site-header {
+        padding: 18px 30px;
+    }
+}
