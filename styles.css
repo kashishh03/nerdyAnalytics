@@ -1,5 +1,5 @@
 /* =========================
-   Global Layout Fix
+   GLOBAL LAYOUT
 ========================= */
 
 * {
@@ -14,8 +14,8 @@ html, body {
 
 body {
     font-family: 'Poppins', sans-serif;
-    color: #1f2933;
     background-color: #f9fafb;
+    color: #1f2933;
     line-height: 1.6;
     display: flex;
     flex-direction: column;
@@ -23,6 +23,12 @@ body {
 
 main {
     flex: 1;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
 }
 
 a {
@@ -35,39 +41,7 @@ ul {
 }
 
 /* =========================
-   Container (NEW - Alignment Fix)
-========================= */
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-}
-
-/* =========================
-   Buttons
-========================= */
-
-.button {
-    display: inline-block;
-    padding: 12px 28px;
-    border-radius: 30px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-.button.primary {
-    background: linear-gradient(135deg, #2563eb, #1d4ed8);
-    color: #fff;
-}
-
-.button.primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
-}
-
-/* =========================
-   Header & Navigation
+   NAVIGATION
 ========================= */
 
 .site-header {
@@ -94,9 +68,13 @@ ul {
     font-weight: 500;
     color: #374151;
     position: relative;
+    padding-bottom: 4px;
 }
 
-/* ACTIVE NAVIGATION FIX */
+.main-nav ul li a:hover {
+    color: #2563eb;
+}
+
 .main-nav ul li a.active {
     color: #2563eb;
     font-weight: 600;
@@ -105,7 +83,7 @@ ul {
 .main-nav ul li a.active::after {
     content: "";
     position: absolute;
-    bottom: -6px;
+    bottom: -4px;
     left: 0;
     width: 100%;
     height: 2px;
@@ -113,37 +91,29 @@ ul {
 }
 
 /* =========================
-   Hero Section
+   HERO SECTION
 ========================= */
 
 .hero-section {
-    min-height: 90vh;
+    min-height: 85vh;
     background: linear-gradient(135deg, #0f172a, #1e293b);
     color: #ffffff;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.hero-section .container {
-    padding: 0 20px;
+    align-items: center;
 }
 
 .hero-section h1 {
     font-size: 3rem;
     font-weight: 700;
-    max-width: 800px;
 }
 
 .hero-section p {
     margin-top: 20px;
-    font-size: 1.1rem;
-    max-width: 650px;
-    opacity: 0.9;
+    max-width: 600px;
 }
 
 /* =========================
-   Section Styling
+   SECTION
 ========================= */
 
 .section {
@@ -155,7 +125,7 @@ ul {
 }
 
 /* =========================
-   Cards
+   CARDS
 ========================= */
 
 .card {
@@ -172,19 +142,33 @@ ul {
 }
 
 /* =========================
-   Footer (Sticky Fixed Properly)
+   BUTTON
+========================= */
+
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: #ffffff;
+    transition: 0.3s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
+}
+
+/* =========================
+   FOOTER
 ========================= */
 
 .site-footer {
     background: #020617;
     color: #cbd5f5;
     padding: 50px 0;
-}
-
-.site-footer .container {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
 }
 
 .site-footer h4 {
@@ -194,10 +178,11 @@ ul {
 .site-footer p {
     font-size: 0.9rem;
     opacity: 0.7;
+    margin-top: 10px;
 }
 
 /* =========================
-   Responsive
+   RESPONSIVE
 ========================= */
 
 @media (max-width: 768px) {
@@ -210,3 +195,4 @@ ul {
         font-size: 2.2rem;
     }
 }
+
