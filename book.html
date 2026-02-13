@@ -1,38 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Book a Session | NerdyAnalytics</title>
 <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
 <header class="site-header">
-<nav class="main-nav">
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="resources.html">Resource Library</a></li>
-<li><a href="programs.html">Programs</a></li>
-<li><a href="notifications.html">Notifications</a></li>
-<li><a href="book.html">Book</a></li>
-<li><a href="subscriptions.html">Subscriptions</a></li>
-<li><a href="blog.html">Blog</a></li>
-</ul>
-</nav>
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="resources.html">Resource Library</a></li>
+      <li><a href="programs.html">Programs</a></li>
+      <li><a href="notifications.html">Notifications</a></li>
+      <li><a href="book.html" class="active">Book</a></li>
+      <li><a href="subscriptions.html">Subscriptions</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+    <a class="button primary" href="programs.html">Start Learning</a>
+  </nav>
 </header>
 
+<main>
+
 <section class="section">
-<h2>Book a Session</h2>
-<form>
-<input type="text" placeholder="Your Name"><br><br>
-<input type="email" placeholder="Your Email"><br><br>
-<input type="date"><br><br>
-<button class="button">Book Now</button>
-</form>
+  <div class="container">
+
+    <h2>Book a Session</h2>
+
+    <div class="card">
+      <form>
+        <p><strong>Your Name</strong></p>
+        <input type="text" placeholder="Enter your name" style="width:100%;padding:10px;margin:10px 0;">
+
+        <p><strong>Your Email</strong></p>
+        <input type="email" placeholder="Enter your email" style="width:100%;padding:10px;margin:10px 0;">
+
+        <p><strong>Select Date</strong></p>
+        <input type="date" style="width:100%;padding:10px;margin:10px 0;">
+
+        <button class="button primary" type="submit">Book Now</button>
+      </form>
+    </div>
+
+  </div>
 </section>
 
+</main>
+
 <footer class="site-footer">
-<h4>NERDYANALYTICS ACADEMY</h4>
-<p>© 2026 NerdyAnalytics</p>
+  <div class="footer-info">
+    <h4>NERDYANALYTICS ACADEMY</h4>
+    <p>DATA SCIENCE & TECHNOLOGY LEARNING PLATFORM</p>
+  </div>
+  <p>© 2026 NerdyAnalytics</p>
 </footer>
 
 </body>
