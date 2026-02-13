@@ -1,10 +1,15 @@
 /* =========================
-   Global Styles
+   Global Layout Fix
 ========================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
 }
 
 body {
@@ -12,6 +17,12 @@ body {
     color: #1f2933;
     background-color: #f9fafb;
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
 }
 
 a {
@@ -24,8 +35,19 @@ ul {
 }
 
 /* =========================
+   Container (NEW - Alignment Fix)
+========================= */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* =========================
    Buttons
 ========================= */
+
 .button {
     display: inline-block;
     padding: 12px 28px;
@@ -44,17 +66,13 @@ ul {
     box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
 }
 
-.button.large {
-    margin-top: 25px;
-    font-size: 1rem;
-}
-
 /* =========================
    Header & Navigation
 ========================= */
+
 .site-header {
     background: #ffffff;
-    padding: 18px 60px;
+    padding: 18px 0;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     position: sticky;
     top: 0;
@@ -75,15 +93,29 @@ ul {
 .main-nav ul li a {
     font-weight: 500;
     color: #374151;
+    position: relative;
 }
 
-.main-nav ul li a:hover {
+/* ACTIVE NAVIGATION FIX */
+.main-nav ul li a.active {
     color: #2563eb;
+    font-weight: 600;
+}
+
+.main-nav ul li a.active::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #2563eb;
 }
 
 /* =========================
    Hero Section
 ========================= */
+
 .hero-section {
     min-height: 90vh;
     background: linear-gradient(135deg, #0f172a, #1e293b);
@@ -91,7 +123,10 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 80px;
+}
+
+.hero-section .container {
+    padding: 0 20px;
 }
 
 .hero-section h1 {
@@ -108,183 +143,70 @@ ul {
 }
 
 /* =========================
-   Expertise Section
+   Section Styling
 ========================= */
-.expertise {
-    padding: 80px 60px;
-    text-align: center;
-    background-color: #ffffff;
+
+.section {
+    padding: 80px 0;
 }
 
-.expertise h2 {
-    font-size: 2.2rem;
-    margin-bottom: 15px;
-}
-
-.expertise p {
-    max-width: 700px;
-    margin: auto;
-    color: #4b5563;
+.section h2 {
+    margin-bottom: 30px;
 }
 
 /* =========================
-   Features Grid
+   Cards
 ========================= */
-.features-grid {
-    padding: 70px 60px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    background-color: #f1f5f9;
-}
-
-.feature {
-    background: #ffffff;
-    padding: 40px;
-    text-align: center;
-    border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-    transition: all 0.3s ease;
-}
-
-.feature:hover {
-    transform: translateY(-6px);
-}
-
-.feature h3 {
-    font-size: 1.3rem;
-    color: #1e3a8a;
-}
-
-/* =========================
-   Tutorials / Cards
-========================= */
-.content-list {
-    padding: 80px 60px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 35px;
-    background-color: #ffffff;
-}
 
 .card {
-    background: #f9fafb;
+    background: #ffffff;
     padding: 30px;
     border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    margin-bottom: 25px;
+    transition: 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-6px);
-}
-
-.card span {
-    font-size: 0.85rem;
-    color: #2563eb;
-    font-weight: 600;
-}
-
-.card h4 {
-    margin: 15px 0;
-    font-size: 1.15rem;
-}
-
-.card a {
-    font-weight: 600;
-    color: #1d4ed8;
+    transform: translateY(-5px);
 }
 
 /* =========================
-   Call To Action
+   Footer (Sticky Fixed Properly)
 ========================= */
-.cta-subscribe {
-    padding: 80px 60px;
-    background: linear-gradient(135deg, #2563eb, #1e40af);
-    text-align: center;
-    color: #ffffff;
-}
 
-.cta-subscribe h2 {
-    font-size: 2.2rem;
-}
-
-.cta-subscribe p {
-    margin: 12px 0 25px;
-}
-
-.cta-subscribe form {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    flex-wrap: wrap;
-}
-
-.cta-subscribe input {
-    padding: 12px 18px;
-    border-radius: 30px;
-    border: none;
-    min-width: 260px;
-    outline: none;
-}
-
-.cta-subscribe button {
-    padding: 12px 30px;
-    border-radius: 30px;
-    border: none;
-    background: #ffffff;
-    color: #1e40af;
-    font-weight: 700;
-    cursor: pointer;
-}
-
-/* =========================
-   Footer
-========================= */
 .site-footer {
     background: #020617;
     color: #cbd5f5;
-    padding: 60px;
+    padding: 50px 0;
 }
 
-.footer-info h4 {
+.site-footer .container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.site-footer h4 {
     color: #ffffff;
 }
 
-.footer-nav {
-    margin: 20px 0;
-}
-
-.footer-nav a {
-    margin-right: 20px;
-    font-size: 0.9rem;
-}
-
-.social-links a img {
-    width: 22px;
-    margin-right: 14px;
-    filter: invert(1);
-}
-
 .site-footer p {
-    margin-top: 25px;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     opacity: 0.7;
 }
 
 /* =========================
    Responsive
 ========================= */
+
 @media (max-width: 768px) {
-    .hero-section {
-        padding: 60px 30px;
+    .main-nav ul {
+        flex-wrap: wrap;
+        gap: 12px;
     }
 
     .hero-section h1 {
         font-size: 2.2rem;
-    }
-
-    .site-header {
-        padding: 18px 30px;
     }
 }
